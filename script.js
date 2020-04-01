@@ -1,7 +1,9 @@
 var itemCollection = [];
 
 function addItem(){
+	// Add item from input element to itemCollection array
 	itemCollection.push(iptItem.value);
+	
 	updateListContainer();
 }
 
