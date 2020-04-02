@@ -1,8 +1,13 @@
 var itemCollection = [];
 
 function addItem(){
-	// Add item from input element to itemCollection array
-	itemCollection.push(iptItem.value);
+	// Create object variable represent item object
+	let item = {
+		code: iptItemCode.value, 
+		name: iptItemName.value
+	};
+	// Add item to itemCollection array
+	itemCollection.push(item);
 	
 	updateListContainer();
 }
@@ -14,6 +19,6 @@ function updateListContainer(){
 	// Loop through itemCollection
 	itemCollection.forEach(function(item){
 		// Add item to listContainer as list
-		listContainer.innerHTML += `<li>${item}</li>`;
+		listContainer.innerHTML += `<li>${item.code} ${item.name}</li>`;
 	});
 }
